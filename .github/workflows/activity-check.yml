@@ -1,0 +1,126 @@
+name: Проверка активности в PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  activity-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Анализ активности
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pull_number = pr.number;
+
+            const commits = await github.paginate(
+              github.rest.pulls.listCommits,
+              {
+                owner,
+                repo,
+                pull_number,
+                per_page: 100
+              }
+            );
+
+            const files = await github.paginate(
+              github.rest.pulls.listFiles,
+              {
+                owner,
+                repo,
+                pull_number,
+                per_page: 100
+              }
+            );
+
+            const reviews = await github.paginate(
+              github.rest.pulls.listReviews,
+              {
+                owner,
+                repo,
+                pull_number,
+                per_page: 100
+              }
+            );
+
+            const additions = files.reduce(
+              (sum, file) => sum + (file.additions || 0),
+              0
+            );
+
+            const deletions = files.reduce(
+              (sum, file) => sum + (file.deletions || 0),
+              0
+            );
+
+            const authors = [
+              ...new Set(
+                commits.map(
+                  commit =>
+                    commit.author?.login ||
+                    commit.commit.author?.name ||
+                    "unknown"
+                )
+              )
+            ];
+
+            const marker = "<!-- isit-activity-check -->";
+
+            const body =
+              marker +
+              "\n\n" +
+              "## 🤖 Автоматическая проверка активности\n\n" +
+              `**PR:** #${pull_number}\n` +
+              `**Автор PR:** @${pr.user.login}\n\n` +
+              "| Показатель | Значение |\n" +
+              "|---|---:|\n" +
+              `| Коммитов | ${commits.length} |\n` +
+              `| Изменённых файлов | ${files.length} |\n` +
+              `| Добавлено строк | ${additions} |\n` +
+              `| Удалено строк | ${deletions} |\n` +
+              `| Ревью | ${reviews.length} |\n` +
+              `| Участники коммитов | ${authors.join(", ") || "—"} |\n\n` +
+              "> Это техническая сводка активности GitHub, " +
+              "а не автоматическая оценка качества работы. " +
+              "Содержательность изменений проверяется отдельно.";
+
+            const comments = await github.paginate(
+              github.rest.issues.listComments,
+              {
+                owner,
+                repo,
+                issue_number: pull_number,
+                per_page: 100
+              }
+            );
+
+            const existing = comments.find(
+              comment =>
+                comment.user?.type === "Bot" &&
+                comment.body?.includes(marker)
+            );
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: pull_number,
+                body
+              });
+            }
