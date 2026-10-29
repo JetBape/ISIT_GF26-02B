@@ -1,7 +1,7 @@
 # ISiT · GF26-02B
 
 <p align="center">
-  <img src="./assets/banner.svg" width="100%" alt="ISiT / GF26-02B — учебный репозиторий группы" />
+  <img src="./banner.svg" width="100%" alt="ISiT / GF26-02B — учебный репозиторий группы" />
 </p>
 
 <p align="center">
