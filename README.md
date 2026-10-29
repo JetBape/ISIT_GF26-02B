@@ -1,7 +1,7 @@
 # ISiT · GF26-02B
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0D1117,45:142B52,100:2563EB&text=ISiT%20%2F%2F%20GF26-02B&fontColor=FFFFFF&fontSize=42&fontAlignY=40&desc=Information%20Systems%20%26%20Technologies&descAlignY=60&descSize=16" width="100%" alt="ISiT GF26-02B" />
+  <img src="./assets/banner.svg" width="100%" alt="ISiT / GF26-02B — учебный репозиторий группы" />
 </p>
 
 <p align="center">
@@ -10,10 +10,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/JetBape/ISIT_GF26-02B"><img src="https://img.shields.io/badge/GitHub-Repository-161B22?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository"></a>
   <img src="https://img.shields.io/badge/Documents-Typst-239DAD?style=for-the-badge" alt="Typst">
-  <img src="https://img.shields.io/badge/Output-PDF-B91C1C?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF">
-  <img src="https://img.shields.io/badge/Workflow-Branches%20%2B%20PR-2563EB?style=for-the-badge&logo=git&logoColor=white" alt="Git workflow">
+  <img src="https://img.shields.io/badge/Output-PDF-B91C1C?style=for-the-badge" alt="PDF">
+  <img src="https://img.shields.io/badge/Workflow-Branches%20%2B%20PR-2563EB?style=for-the-badge" alt="Git workflow">
 </p>
 
 ---
@@ -36,9 +35,8 @@
   <tr>
     <td width="50%">
       <h3>🧩 Пример реферата</h3>
-      <p>Пример структуры и оформления учебной работы.</p>
-      <a href="./examples/example_referat.typ">Открыть исходник Typst →</a><br>
-      <sub>GitHub показывает этот файл как исходный код. Для просмотра готового оформления нужен PDF.</sub>
+      <p>Учебный пример структуры документа. GitHub показывает файл Typst как исходный код.</p>
+      <a href="./examples/example_referat.typ">Открыть исходник Typst →</a>
     </td>
     <td width="50%">
       <h3>🗂️ Темы и задачи</h3>
@@ -50,35 +48,23 @@
 
 ## О проекте
 
-Этот репозиторий предназначен для организации совместной работы над семинарскими рефератами по дисциплине **«Информационные системы и технологии» (ИСиТ)**.
-
-Здесь хранятся исходные документы, готовые PDF-файлы, инструкции и материалы, необходимые для подготовки работ.
+Этот репозиторий предназначен для совместной работы над семинарскими рефератами по дисциплине **«Информационные системы и технологии» (ИСиТ)**.
 
 ### Основные принципы
 
 - **Единый стандарт оформления** — используем общий шаблон Typst.
-- **Совместная разработка** — работаем в отдельных ветках Git.
+- **Совместная работа** — работаем в отдельных ветках Git.
 - **Прозрачность изменений** — фиксируем работу осмысленными коммитами.
 - **Проверка результатов** — отправляем готовые материалы через Pull Request.
 - **Воспроизводимость** — храним исходник `.typ` вместе с итоговым PDF.
 
 ## Рабочий процесс
 
-<p align="center">
-  <img src="https://img.shields.io/badge/01-Create%20Branch-1D4ED8?style=flat-square" alt="Step 1">
-  →
-  <img src="https://img.shields.io/badge/02-Write%20%26%20Commit-2563EB?style=flat-square" alt="Step 2">
-  →
-  <img src="https://img.shields.io/badge/03-Build%20PDF-0891B2?style=flat-square" alt="Step 3">
-  →
-  <img src="https://img.shields.io/badge/04-Pull%20Request-15803D?style=flat-square" alt="Step 4">
-</p>
-
 1. Создайте собственную ветку для работы.
-2. Скопируйте шаблон в отдельный файл реферата.
+2. Скопируйте `template.typ` в отдельный файл реферата.
 3. Подготовьте текст и оформите источники.
 4. Скомпилируйте документ в PDF.
-5. Добавьте в ветку исходник и готовый PDF.
+5. Добавьте исходник и PDF в свою ветку.
 6. Создайте Pull Request в `main`.
 
 ### Пример структуры веток
@@ -96,8 +82,6 @@ main
 
 ### 1. Создание ветки
 
-Назовите ветку так, чтобы было понятно, кто и над какой темой работает.
-
 ```bash
 git switch main
 git pull origin main
@@ -106,15 +90,13 @@ git switch -c feat/ivanov-topic-1
 
 ### 2. Подготовка документа
 
-Скопируйте `template.typ` и переименуйте копию, например, в `referat.typ`.
+Скопируйте `template.typ` в отдельный файл, например `referat.typ`.
 
-**Важно:** не редактируйте `template.typ` напрямую — он должен оставаться исходным шаблоном для следующих работ.
+**Важно:** не редактируйте `template.typ` напрямую — он должен оставаться исходным шаблоном.
 
 ### 3. Компиляция в PDF
 
 Установите [Typst](https://typst.app/) или воспользуйтесь веб-приложением Typst.
-
-Команда для сборки документа:
 
 ```bash
 typst compile referat.typ referat.pdf
@@ -130,11 +112,7 @@ git push -u origin feat/ivanov-topic-1
 
 После этого откройте Pull Request в `main`.
 
-Команды выше — пример рабочего процесса. При необходимости сначала синхронизируйтесь с актуальной версией репозитория и следуйте инструкции курса.
-
 ## Чек-лист перед сдачей
-
-Перед отправкой Pull Request убедитесь, что:
 
 - [ ] Все поля-подсказки заполнены или удалены.
 - [ ] Документ успешно компилируется в PDF.
@@ -142,7 +120,7 @@ git push -u origin feat/ivanov-topic-1
 - [ ] Есть введение, основная часть и заключение.
 - [ ] Список источников оформлен и проверен.
 - [ ] В репозитории присутствуют `.typ` и итоговый PDF.
-- [ ] Изменения отправлены из отдельной ветки через Pull Request.
+- [ ] Изменения отправлены через Pull Request из отдельной ветки.
 
 ## Правила оформления
 
@@ -157,7 +135,7 @@ git push -u origin feat/ivanov-topic-1
 
 - Используйте PT Serif, предусмотренный шаблоном.
 - Не добавляйте файлы шрифтов в репозиторий.
-- Не заменяйте исходный шаблон демонстрационным примером.
+- Не редактируйте шаблон напрямую.
 - Проверяйте, что PDF соответствует актуальному исходнику.
 - Сроки сдачи определяются требованиями соответствующего семинара.
 
@@ -165,23 +143,20 @@ git push -u origin feat/ivanov-topic-1
 
 ```text
 ISIT_GF26-02B/
-├── README.md              # Главная страница проекта
-├── template.typ           # Исходный шаблон реферата
+├── README.md
+├── assets/
+│   └── banner.svg
+├── template.typ
 ├── examples/
-│   └── example_referat.typ # Пример структуры документа
-├── INSTRUCTION_RU.md      # Инструкция для участников
-└── ...                    # Работы и другие материалы
+│   └── example_referat.typ
+└── INSTRUCTION_RU.md
 ```
 
-Список выше показывает основные файлы проекта; фактическое содержимое репозитория может отличаться.
+Это схематичное представление основных файлов; фактическая структура может отличаться.
 
 ---
 
 <p align="center">
   <strong>ISiT · GF26-02B</strong><br>
   <sub>Один репозиторий. Единые правила. Совместная работа.</sub>
-</p>
-
-<p align="center">
-  <a href="https://github.com/JetBape/ISIT_GF26-02B">GitHub Repository</a>
 </p>
