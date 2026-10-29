@@ -1,7 +1,7 @@
 # ISiT · GF26-02B
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&height=220&color=0:0D1117,45:142B52,100:2563EB&text=ISiT%20%2F%2F%20GF26-02B&fontColor=FFFFFF&fontSize=42&fontAlignY=40&desc=Information%20Systems%20%26%20Technologies&descAlignY=60&descSize=16" width="100%" alt="ISiT GF26-02B" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0D1117,45:142B52,100:2563EB&text=ISiT%20%2F%2F%20GF26-02B&fontColor=FFFFFF&fontSize=42&fontAlignY=40&desc=Information%20Systems%20%26%20Technologies&descAlignY=60&descSize=16" width="100%" alt="ISiT GF26-02B" />
 </p>
 
 <p align="center">
@@ -37,7 +37,8 @@
     <td width="50%">
       <h3>🧩 Пример реферата</h3>
       <p>Пример структуры и оформления учебной работы.</p>
-      <a href="./example_referat.typ">Посмотреть пример →</a>
+      <a href="./examples/example_referat.typ">Открыть исходник Typst →</a><br>
+      <sub>GitHub показывает этот файл как исходный код. Для просмотра готового оформления нужен PDF.</sub>
     </td>
     <td width="50%">
       <h3>🗂️ Темы и задачи</h3>
@@ -166,7 +167,8 @@ git push -u origin feat/ivanov-topic-1
 ISIT_GF26-02B/
 ├── README.md              # Главная страница проекта
 ├── template.typ           # Исходный шаблон реферата
-├── example_referat.typ    # Пример структуры документа
+├── examples/
+│   └── example_referat.typ # Пример структуры документа
 ├── INSTRUCTION_RU.md      # Инструкция для участников
 └── ...                    # Работы и другие материалы
 ```
