@@ -1,3 +1,7 @@
+#set page(paper: "a4", margin: (top: 2cm, bottom: 2cm, left: 3cm, right: 1.5cm), numbering: "1")
+#set text(font: "PT Serif", size: 14pt, lang: "ru")
+#set par(justify: true, leading: 0.65em, first-line-indent: 1.25cm)
+#set heading(numbering: "1.")
 
 #set document(title: "Реферат", author: "")
 #set page(
