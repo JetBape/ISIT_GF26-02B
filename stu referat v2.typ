@@ -357,12 +357,12 @@ Opus — современный аудиокодек, предназначенн
 
 
 
-1. Международная организация по стандартизации интернета (IETF). RFC 9639. Свободный аудиокодек со сжатием без потерь (Free Lossless Audio Codec, FLAC). 2024. URL:https://www.rfc-editor.org/info/rfc9639/?utm_source=chatgpt.com
+1. Международная организация по стандартизации интернета (IETF). RFC 9639. Свободный аудиокодек со сжатием без потерь (Free Lossless Audio Codec, FLAC). 2024. URL:https://www.rfc-editor.org/info/rfc9639/?utm_source
 
-2. Фонд Xiph.Org. Документация и описание формата FLAC (FLAC — Format Overview). URL:https://www.xiph.org/flac/index.html?utm_source=chatgpt.com
+2. Фонд Xiph.Org. Документация и описание формата FLAC (FLAC — Format Overview). URL:https://www.xiph.org/flac/index.html?utm_source.com
 
-3. Mozilla Developer Network (MDN). Руководство по аудиокодекам и аудиоформатам для веб-технологий (Web Audio Codec Guide). URL:https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Audio_codecs?utm_source=chatgpt.com
+3. Mozilla Developer Network (MDN). Руководство по аудиокодекам и аудиоформатам для веб-технологий (Web Audio Codec Guide). URL:https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Audio_codecs?utm_source.com
 
-4. Международная организация по стандартизации интернета (IETF). RFC 6716. Описание аудиокодека Opus (Definition of the Opus Audio Codec). 2012. URL:https://www.rfc-editor.org/info/rfc6716/?utm_source=chatgpt.com
+4. Международная организация по стандартизации интернета (IETF). RFC 6716. Описание аудиокодека Opus (Definition of the Opus Audio Codec). 2012. URL:https://www.rfc-editor.org/info/rfc6716/?utm_source.com
 
-5. Международный союз электросвязи (ITU-R). Рекомендация BS.1116-3. Методы субъективной оценки небольших искажений в аудиосистемах. 2015. URL:https://www.itu.int/rec/R-REC-BS.1116-3-201502-I/en?utm_source=chatgpt.com
+5. Международный союз электросвязи (ITU-R). Рекомендация BS.1116-3. Методы субъективной оценки небольших искажений в аудиосистемах. 2015. URL:https://www.itu.int/rec/R-REC-BS.1116-3-201502-I/en?utm_source.com
